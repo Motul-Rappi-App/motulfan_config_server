@@ -1,0 +1,6 @@
+application:
+  security:
+    jwt:
+      expiration: 604800000
+      refresh-token:
+        expiration: 604800000

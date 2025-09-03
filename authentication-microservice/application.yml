@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: authentication-microservice
+
+server:
+  port: ${PORT:${SERVER_PORT:8080}}
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    # service-url:
+    #   default-zone: http://localhost:8761/eureka
+  
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  
+  admin-paths:
+    - uri: "/admin"
+      method: "GET|DELETE"
+    - uri: "/location"
+      method: "PUT|POST|DELETE"
+    - uri: "/product"
+      method: "PUT|POST|GET|DELETE"
+    - uri: "/promotion"
+      method: "PUT|POST|GET|DELETE"
+    - uri: "/rappiCourier"
+      method: "PUT|GET|DELETE"
+    - uri: "/registerPromotion"
+      method: "POST"
+    - uri: "/commerce"
+      method: "GET|DELETE"
+    - uri: "/auth/admin"
+      method: "PUT|POST"
+    - uri: "/auth/commerce"
+      method: "PUT|POST"
+  
+application: 
+  security:
+    jwt:
+      expiration: ${JWT_EXPIRATION:604800000}
+      refresh-token:
+        expiration: ${JWT_REFRESH_EXPIRATION:604800000}
