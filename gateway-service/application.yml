@@ -33,12 +33,12 @@ spring:
             - name: AuthFilter
               args:
                 excludePaths: /location/public
-        - id: PRODUCTS-MICROSERVICE
-          uri: lb://PRODUCTS-MICROSERVICE/
-          predicates:
-            - Path=/product/**
-          filters:
-            - AuthFilter
+#        - id: PRODUCTS-MICROSERVICE
+#          uri: lb://PRODUCTS-MICROSERVICE/
+#          predicates:
+#            - Path=/product/**
+#          filters:
+#            - AuthFilter
         - id: PROMOTIONS-MICROSERVICE
           uri: lb://PROMOTIONS-MICROSERVICE/
           predicates:
