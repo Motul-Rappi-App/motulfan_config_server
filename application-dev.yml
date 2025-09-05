@@ -1,10 +1,3 @@
-spring:
-  datasource:
-    url: jdbc:postgresql://${RDS_HOSTNAME:localhost}:${RDS_PORT:5433}/MotulRappiDB
-    username: ${DB_USERNAME:postgres}
-    password: ${DB_PASSWORD:Motu1#R4ppI@2024}
-    driver-class-name: org.postgresql.Driver
-
 eureka:
   client:
     fetch-registry: true
