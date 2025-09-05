@@ -5,7 +5,7 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
   datasource:
-    url: jdbc:postgresql://localhost:5433/MotulRappiDB
+    url: jdbc:postgresql://localhost:5432/MotulRappiDB
     username: postgres
     password: Motu1f4N@2025?
     driver-class-name: org.postgresql.Driver
