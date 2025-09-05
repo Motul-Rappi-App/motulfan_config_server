@@ -1,3 +1,9 @@
+datasource:
+  url: jdbc:postgresql://localhost:5433/MotulRappiDB
+  username: postgres
+  password: Motu1f4N@2025?
+  driver-class-name: org.postgresql.Driver
+
 logging:
   level:
     root: ERROR
